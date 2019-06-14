@@ -1,5 +1,8 @@
 <li id="tweet-<%= tweet.id %>">
   <div class="card bg-dark text-white">
+    <% if tweet.image.attached? %>
+      <%= image_tag tweet.image.variant(resize:'100x100').processed %>
+    <% end %>
     <%# <%= image_tag tweet.image if tweet.image.present? %> %>
     <div class="card-img-overlay">
       <% if current_user?(tweet.user) %>
