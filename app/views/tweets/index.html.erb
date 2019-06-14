@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-4">
+    <section class="micropost_form">
+      <%= render 'shared/tweet_form' %>
+    </section>
+    <% if @user.tweets.any? %>
+      <ol>
+        <%= render @tweets %>
+      </ol>
+      # Insert pagination by kaminari
+    <% end %>
+  </div>
+</div>

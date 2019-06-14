@@ -1,0 +1,10 @@
+<li id="tweet-<%= tweet.id %>">
+  <div class="card bg-dark text-white">
+    <%# <%= image_tag tweet.image if tweet.image.present? %> %>
+    <div class="card-img-overlay">
+      <h5 class="card-title"><%= tweet.content %></h5>
+      <p class="card-text"><%= tweet.user.name %></p>
+      <p class="card-text"><%= time_ago_in_words(tweet.created_at) %> ago </p>
+    </div>
+  </div>
+</li>
