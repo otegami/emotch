@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-4">
+    <% if @user.tweets.any? %>
+      <h3>Tweets(<%= @user.tweets.count %>)</h3>
+      <ol>
+        <%= render @tweets %>
+      </ol>
+      # Insert pagination by kaminari
+    <% end %>
+  </div>
+</div>
