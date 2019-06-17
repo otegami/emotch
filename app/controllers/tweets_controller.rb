@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   def index
     @user = current_user
     @tweet = current_user.tweets.build
-    @tweets = Tweet.page( params[:page] )
+    @tweets = Tweet.page(params[:page])
   end
 
   def create
