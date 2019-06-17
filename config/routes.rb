@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/signout', to: 'sessions#destroy'
   resources :users, only: [ :show ]
   resources :tweets, except: [ :show, :edit, :update ]
+  resources :emotions, only: [ :create, :destroy ]
 end

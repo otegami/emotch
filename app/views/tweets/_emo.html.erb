@@ -1,0 +1,4 @@
+<%= form_with(model: current_user.emotions.build) do |f| %>
+  <div><%= f.hidden_field :tweet_id, :value => tweet.id %></div>
+  <%= f.submit "Emo", class: "" %>
+<% end %>

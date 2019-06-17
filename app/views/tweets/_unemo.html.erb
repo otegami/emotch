@@ -1,0 +1,3 @@
+<%= form_with(current_user.emotions.find_by(tweet_id: tweet.id), method: :delete) do |f| %>
+  <%= f.submit "Unemo" %>
+<% end %>
