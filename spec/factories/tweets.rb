@@ -3,6 +3,10 @@ FactoryBot.define do
     content { "MyText" }
     association :user, factory: :user
   end
+  factory :other_tweet, class: Tweet do
+    content { "other's tweet" }
+    association :user, factory: :other_user
+  end
   factory :orange, class: Tweet do
     content { "I just ate an orange!" }
     created_at { 10.minutes.ago }

@@ -1,0 +1,9 @@
+<p>
+  <div id="emo_form">
+    <% if @user.emo?(tweet) %>
+      <%= render 'unemo', tweet: tweet %>
+    <% else %>
+      <%= render 'emo', tweet: tweet %>
+    <% end %>
+  </div>
+</p>

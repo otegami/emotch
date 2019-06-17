@@ -1,0 +1,3 @@
+<%= form_with(url: emotion_path(tweet.id), method: :delete, remote: true) do |f| %>
+  <%= f.submit "Unemo" %>
+<% end %>

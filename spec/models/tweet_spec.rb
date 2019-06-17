@@ -12,7 +12,7 @@ RSpec.describe Tweet, type: :model do
     expect(tweet).to be_valid
   end
 
-  it "is invalid with no user_id" do
+  it "is invalid without user_id" do
     user.id = nil
     expect(tweet).to_not be_valid
   end

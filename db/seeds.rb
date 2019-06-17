@@ -18,7 +18,12 @@ end
 
 # create sample tweet data
 users = User.order(:created_at).take(6)
-50.times do |n|
+50.times do
   content = Faker::Lorem.sentence(1)
   users.each{ |user| user.tweets.create!(content: content) }
 end
+
+# create sample emotions
+tweets = Tweet.where(user_id: 2)
+user = User.first
+tweets.each { |tweet| user.emo(tweet) }
