@@ -9,13 +9,7 @@
       <% end %>
       <h5 class="card-title"><%= tweet.content %></h5>
       <p class="card-text"><%= tweet.user.name %></p>
-      <p>
-        <% if @user.emo?(tweet) %>
-          <%= render 'unemo', tweet: tweet %>
-        <% else %>
-          <%= render 'emo', tweet: tweet %>
-        <% end %>
-      </p>
+      <%= render 'emo_form', tweet: tweet %>
       <p class="card-text"><%= time_ago_in_words(tweet.created_at) %> ago </p>
     </div>
   </div>

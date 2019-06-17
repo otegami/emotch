@@ -1,7 +1,7 @@
 <p>
   <% if @user.emo?(tweet) %>
-    <%= render 'unemo' %>
+    <%= render 'unemo', tweet: tweet %>
   <% else %>
-    <%= render 'emo' %>
+    <%= render 'emo', tweet: tweet %>
   <% end %>
 </p>

@@ -7,7 +7,8 @@
       <ol>
         <%= render @tweets %>
       </ol>
-      # Insert pagination by kaminari
     <% end %>
+    # Insert pagination by kaminari
+    <%= paginate @tweets %>
   </div>
 </div>
