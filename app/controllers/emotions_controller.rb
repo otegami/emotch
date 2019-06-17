@@ -3,13 +3,21 @@ class EmotionsController < ApplicationController
 
   def create
   # when errors happen, use @emotion in view
-    tweet = Tweet.find(params[:tweet_id])
-    current_user.emo(tweet)
-    redirect_to tweets_path
+    @tweet = Tweet.find(params[:tweet_id])
+    current_user.emo(@tweet)
+    # change response depending upon request
+    respond_to do |format|
+      format.html { redirect_to tweets_path }
+      format.js
+    end
   end
   def destroy
-    tweet = Tweet.find(params[:id])
-    current_user.unemo(tweet)
-    redirect_to tweets_path
+    @tweet = Tweet.find(params[:id])
+    current_user.unemo(@tweet)
+    # change response depending upon request
+    respond_to do |format|
+      format.html { redirect_to tweets_path }
+      format.js
+    end
   end
 end

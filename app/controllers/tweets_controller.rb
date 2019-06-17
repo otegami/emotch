@@ -3,7 +3,6 @@ class TweetsController < ApplicationController
   before_action :correct_user, only: :destroy
   def index
     @user = current_user
-    @tweet = current_user.tweets.build
     @tweets = Tweet.page(params[:page])
   end
 
