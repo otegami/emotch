@@ -47,6 +47,8 @@ gem 'mini_magick'
 gem 'kaminari'
 # use jquery
 gem 'jquery-rails'
+# give you count function to create ranking function
+gem 'counter_culture', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
