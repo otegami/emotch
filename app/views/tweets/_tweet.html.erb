@@ -9,8 +9,8 @@
       <% end %>
       <h5 class="card-title"><%= tweet.content %></h5>
       <p class="card-text"><%= tweet.user.name %></p>
-      <%= render 'emo_form', tweet: tweet %>
-      <%= render 'retweet', tweet: tweet %>
+      <%= render 'tweets/emo_form', tweet: tweet %>
+      <%= render 'tweets/retweet', tweet: tweet %>
       <p class="card-text"><%= time_ago_in_words(tweet.created_at) %> ago </p>
     </div>
   </div>

@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   has_many :tweets, dependent: :destroy
   has_many :emotions, dependent: :destroy
-  has_many :emo_post, through: :emotions, source: :tweet
+  has_many :emo_tweets, through: :emotions, source: :tweet
   has_many :retweets, dependent: :destroy
-  has_many :retweet_post, through: :retweets, source: :tweet
+  has_many :retweet_posts, through: :retweets, source: :tweet
 
   # create session with omniauth-twitter
   def self.find_or_create_from_auth(auth)
@@ -22,7 +22,7 @@ class User < ApplicationRecord
 
   # emo tweet( like good in twitter, facebook )
   def emo(tweet)
-    emo_post << tweet
+    emo_tweets << tweet
   end
 
   # unemoo tweet ( remove good at tweet )
@@ -32,13 +32,13 @@ class User < ApplicationRecord
 
   # check whether emo or not
   def emo?(tweet)
-    emo_post.include?(tweet)
+    emo_tweets.include?(tweet)
   end
 
   # share tweet to twitter by twitter API
   def share(tweet)
     # insert a tweet which user retweets into retweet_table
-    retweet_post << tweet
+    retweet_posts << tweet
     # create twitter's client
     user = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV['TWITTER_KEY']
