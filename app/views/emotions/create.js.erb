@@ -1,1 +1,1 @@
-$("#emo_form").html("<%= escape_javascript(render('tweets/unemo', tweet: @tweet)) %>");
+$("#emo_form_<%= @tweet.id %>").html("<%= escape_javascript(render('tweets/unemo', tweet: @tweet)) %>");
