@@ -1,0 +1,6 @@
+<p>
+  <%= form_with(url: retweets_path, local: true) do |f| %>
+    <div><%= f.hidden_field :tweet_id, :value => tweet.id %></div>
+    <%= f.submit "Retweet", class:"" %>
+  <% end %>
+</p>

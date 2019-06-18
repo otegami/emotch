@@ -40,6 +40,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 # user twitter APIs
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'twitter'
 # use image resize
 gem 'mini_magick'
 # create pagination
