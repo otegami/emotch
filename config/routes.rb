@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users, only: [ :show ]
   resources :tweets, except: [ :show, :edit, :update ]
   resources :emotions, only: [ :create, :destroy ]
+  resources :retweets, only: :create
 end
