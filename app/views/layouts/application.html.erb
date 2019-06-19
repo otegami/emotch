@@ -10,11 +10,6 @@
   </head>
   <body>
     <header>
-      <% if logged_in? %>
-        <%= link_to 'Logout', '/signout' %>
-      <% else %>
-        <%= link_to 'Twitter Login', '/auth/twitter' %>
-      <% end %>
     </header>
     <% if flash[:notice] %>
       <div class="notice">
