@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :tweets, except: [ :show, :edit, :update ]
   resources :emotions, only: [ :index, :create, :destroy ]
   resources :retweets, only: :create
+  resources :rankings, only: :index
 end
