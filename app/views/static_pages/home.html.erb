@@ -1,39 +1,50 @@
-<header class="masthead">
-  <div class="container my-auto">
-    <div class="container text-center my-auto">
-      <h1 class="mb-1">たった一言に</h1>
-      <h3 class="mb-5">
-        <em>25文字で考えたこと、想ったことを詰め込もう</em>
-      </h3>
-      <% if logged_in? %>
-        <%= link_to 'Logout', '/signout', class:"btn btn-primary btn-xl" %>
-      <% else %>
-        <%= link_to 'Twitter Login', '/auth/twitter', class:"btn btn-primary btn-xl" %>
-      <% end %>
+<main class="masthead">
+  <div class="container text-center my-auto">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1 class="mb-2">たった一言に</h1>
+      </div>
     </div>
     <div class="row">
-      <div class="col-md-2 offset-md-3 mb-5">
-        <div class="card">
-          <div class="card-body">
-            <p>ともだちや好きな人のポエムを購読することができます。でも誰に読まれているかはポエムの持ち主にはわからないので、気軽に好きな人のポエムだけ読めます。</p>
-          </div>
-        </div>
+      <div class="col-md-6 offset-md-3">
+        <h3 class="mb-2">
+          <em>考え、想いを詰め込もう。言葉の美しさ。</em>
+        </h3>
       </div>
-      <div class="col-md-2 mb-5">
-        <div class="card">
-          <div class="card-body">
-            <p>ともだちや好きな人のポエムを購読することができます。でも誰に読まれているかはポエムの持ち主にはわからないので、気軽に好きな人のポエムだけ読めます。</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 mb-5">
-        <div class="card">
-          <div class="card-body">
-            <p>ともだちや好きな人のポエムを購読することができます。でも誰に読まれているかはポエムの持ち主にはわからないので、気軽に好きな人のポエムだけ読めます。</p>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="my-5">
+          <% if logged_in? %>
+            <%= link_to 'Logout', '/signout', class:"btn btn-primary btn-lg" %>
+          <% else %>
+            <%= link_to 'Twitter Login', '/auth/twitter', class:"btn btn-primary btn-lg" %>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
+  <!-- create explanation about this app -->
+  <!-- <div class="container text-center">
+    <div class="row">
+      <div class="col-md-2 offset-md-3 mb-5">
+        <p>ともだちや好きな人のポエムを購読することができます。でも誰に読まれているかはポエムの持ち主にはわからないので、気軽に好きな人のポエムだけ読めます。</p>
+      </div>
+      <div class="col-md-2 mb-5">
+        <div class="card">
+          <div class="card-body">
+            <p>ともだちや好きな人のポエムを購読することができます。でも誰に読まれているかはポエムの持ち主にはわからないので、気軽に好きな人のポエムだけ読めます。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 mb-5">
+        <div class="card">
+          <div class="card-body">
+            <p>ともだちや好きな人のポエムを購読することができます。でも誰に読まれているかはポエムの持ち主にはわからないので、気軽に好きな人のポエムだけ読めます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
   <div class="overlay"></div>
-</header>
+</main>

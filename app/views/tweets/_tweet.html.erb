@@ -1,17 +1,35 @@
-<li id="tweet-<%= tweet.id %>">
-  <div class="card bg-dark text-white">
+<div class="card my-5">
+  <div id="tweet-<%= tweet.id %>">
     <% if tweet.image.attached? %>
-      <%= image_tag tweet.image.variant(resize:'100x100').processed %>
+      <%= image_tag(tweet.image.variant(resize:'100x100').processed, :class => "card-img") %>
+    <% else %>
+      <%= image_tag('landscape.jpg', :class => "card-img") %>
     <% end %>
     <div class="card-img-overlay">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="tweet-content m-auto">
+            <%= tweet.content %>
+            <div class="tweet-auther">
+              <%= tweet.user.name %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="emo">
+          <%= render 'tweets/emo_form', tweet: tweet %>
+        </div>
+        <div class="twitter">
+          <%= render 'tweets/retweet', tweet: tweet %>
+        </div>
+        <div class="tweet-time">
+          <%= time_ago_in_words(tweet.created_at) %> ago
+        </div>
+      </div>
       <% if current_user?(tweet.user) %>
         <%= link_to "delete", tweet, method: :delete, data: { confirm: "You sure ?" } %>
       <% end %>
-      <h5 class="card-title"><%= tweet.content %></h5>
-      <p class="card-text"><%= tweet.user.name %></p>
-      <%= render 'tweets/emo_form', tweet: tweet %>
-      <%= render 'tweets/retweet', tweet: tweet %>
-      <p class="card-text"><%= time_ago_in_words(tweet.created_at) %> ago </p>
     </div>
   </div>
-</li>
+</div>
