@@ -9,7 +9,6 @@
           <% if @user.tweets.any? %>
             <%= render @tweets %>
           <% end %>
-          # Insert pagination by kaminari
           <%= paginate @tweets %>
         </div>
       </div>
