@@ -1,14 +1,18 @@
-<div class="row">
-  <div class="col-md-8 col-md-offset-4">
-    <section class="micropost_form">
-      <%= render 'shared/tweet_form' %>
-    </section>
-    <% if @user.tweets.any? %>
-      <ol>
-        <%= render @tweets %>
-      </ol>
-    <% end %>
-    # Insert pagination by kaminari
-    <%= paginate @tweets %>
+<main class="tweet-index">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 mt-2">
+        <div class="col-md-10 offset-md-1">
+          <div class="micropost_form card">
+            <%= render 'shared/tweet_form' %>
+          </div>
+          <% if @user.tweets.any? %>
+            <%= render @tweets %>
+          <% end %>
+          # Insert pagination by kaminari
+          <%= paginate @tweets %>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</main>

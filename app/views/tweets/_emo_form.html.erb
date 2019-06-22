@@ -1,9 +1,7 @@
-<p>
-  <div id="emo_form_<%= tweet.id %>">
-    <% if @user.emo?(tweet) %>
-      <%= render '/tweets/unemo', tweet: tweet %>
-    <% else %>
-      <%= render '/tweets/emo', tweet: tweet %>
-    <% end %>
-  </div>
-</p>
+<div id="emo_form_<%= tweet.id %>">
+  <% if @user.emo?(tweet) %>
+    <%= render '/tweets/unemo', tweet: tweet %>
+  <% else %>
+    <%= render '/tweets/emo', tweet: tweet %>
+  <% end %>
+</div>

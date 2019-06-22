@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ main {
+   padding-top: 70px;
+ }
+ // I want to write this scss in tweets.scss. how do I write? maybe about partial?
+ .tweet-content {
+   font-size: 30px;
+   font-weight: 700;;
+ }

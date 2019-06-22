@@ -1,17 +1,42 @@
-<li id="tweet-<%= tweet.id %>">
-  <div class="card bg-dark text-white">
+<div class="card my-5">
+  <div id="tweet-<%= tweet.id %>">
     <% if tweet.image.attached? %>
-      <%= image_tag tweet.image.variant(resize:'100x100').processed %>
+      <%= image_tag(tweet.image.variant(combine_options:{resize:"600x350^",crop:"600x350+0+0",gravity: :center}).processed, :class => "card-img") %>
+    <% else %>
+      <%= image_tag('landscape.jpg', :class => "card-img") %>
     <% end %>
     <div class="card-img-overlay">
-      <% if current_user?(tweet.user) %>
-        <%= link_to "delete", tweet, method: :delete, data: { confirm: "You sure ?" } %>
-      <% end %>
-      <h5 class="card-title"><%= tweet.content %></h5>
-      <p class="card-text"><%= tweet.user.name %></p>
-      <%= render 'tweets/emo_form', tweet: tweet %>
-      <%= render 'tweets/retweet', tweet: tweet %>
-      <p class="card-text"><%= time_ago_in_words(tweet.created_at) %> ago </p>
+      <div class="row">
+        <div class="col-md-12">
+          <% if current_user?(tweet.user) %>
+            <%= link_to tweet_path(tweet), method: :delete, data: { confirm: "You sure ?" }, class:"float-right" do %>
+              <i class="fas fa-trash-restore"></i>削除
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="tweet-content text-white h2 text-center my-5 pt-1">
+            <%= tweet.content %>
+            <div class="row">
+              <div class="col-md-12 mt-1">
+                <div class="tweet-auther h5 float-right">
+                  <%= tweet.user.name %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row tweet-footer">
+        <div class="emo col-md-6 py-4 text-center">
+          <%= render 'tweets/emo_form', tweet: tweet %>
+        </div>
+        <div class="twitter col-md-6 py-4 text-center">
+          <%= render 'tweets/retweet', tweet: tweet %>
+        </div>
+      </div>
     </div>
   </div>
-</li>
+</div>
