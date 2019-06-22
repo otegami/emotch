@@ -9,8 +9,41 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
-    </header>
+    <% if logged_in? %>
+      <header class="nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-center fixed-top">
+          <div class="col-md-9 offset-md-2">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="col-md-4">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item mx-3">
+                    <%= link_to 'Home', tweets_path, class: "nav-link" %>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <%= link_to 'Emotion', emotions_path, class: "nav-link" %>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <%= link_to 'Ranking', rankings_path, class: "nav-link" %>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <a class="navbar-brand" href="#">Navbar</a>
+              </div>
+              <div class="col-md-4 offset-md-1">
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+              <div class="col-md-1">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <% end %>
     <% if flash[:notice] %>
       <div class="notice">
         <%= flash[:notice]%>

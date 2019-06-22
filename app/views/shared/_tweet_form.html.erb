@@ -1,10 +1,18 @@
 <%= form_with model: current_user.tweets.build, local: :true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "25words change your world"%>
+  <div class="field p-2">
+    <%= f.text_area :content, placeholder: "25words change your world", class:"form-control", rows:"3"%>
   </div>
-  <div class="file">
-    <%= f.file_field :image %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="file p-1">
+        <%= f.file_field :image, class: "folat-left" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="col-md-4 offset-md-8 px-1 pb-1">
+        <%= f.submit "Post", class: "btn btn-success btn-lg" %>
+      </div>
+    </div>
   </div>
-  <%= f.submit "Post", class: "" %>
 <% end %>

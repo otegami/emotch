@@ -51,6 +51,8 @@ gem 'jquery-rails'
 gem 'counter_culture', '~> 2.0'
 # use Bootstrap
 gem 'bootstrap', '~> 4.3.1'
+# use Font-awesome
+gem 'font-awesome-sass', '~> 5.8.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
