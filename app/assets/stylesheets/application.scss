@@ -22,7 +22,7 @@
    background-color: 	#F5F5F5;
  }
  // I want to write this scss in tweets.scss. how do I write? maybe about partial?
- .tweet-content {
+ .tweet-content, .profile-name {
    font-size: 30px;
-   font-weight: 700;;
+   font-weight: 700;
  }
