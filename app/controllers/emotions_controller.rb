@@ -1,5 +1,6 @@
 class EmotionsController < ApplicationController
   before_action :logged_in_user, only: [:index, :show, :create, :destroy]
+  before_action :search_form, only: [:index, :show, :create, :destroy]
 
   def index
     @user = current_user
