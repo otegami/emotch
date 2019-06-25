@@ -45,18 +45,36 @@
             <div id="profile_index">
               <div class="tab-content">
                 <div class="tab-pane active" id="tweet_index" role="tabpanel">
-                  <% if @user.tweets.any? %>
-                    <%= render @tweets %>
-                  <% end %>
-                  <%= paginate @tweets %>
+                  <div id="tweets">
+                    <% if @user.tweets.any? %>
+                      <%= render @tweets %>
+                    <% end %>
+                  </div>
+                  <div class="page-load-status">
+                    <div class="infinite-scroll-request">
+                      Loading...
+                      <%= paginate @tweets %>
+                    </div>
+                    <p class="infinite-scroll-last">End of content</p>
+                    <p class="infinite-scroll-error">No more pages to load</p>
+                  </div>
                 </div>
                 <div class="tab-pane" id="emo_index" role="tabpanel">
-                  <% if @user.emo_tweets.any? %>
-                    <% @emo_tweets.each do |tweet| %>
-                      <%= render '/tweets/tweet', tweet: tweet %>
+                  <div id="tweets">
+                    <% if @user.emo_tweets.any? %>
+                      <% @emo_tweets.each do |tweet| %>
+                        <%= render '/tweets/tweet', tweet: tweet %>
+                      <% end %>
                     <% end %>
-                  <% end %>
-                  <%= paginate @emo_tweets %>
+                  </div>
+                  <div class="page-load-status">
+                    <div class="infinite-scroll-request">
+                      Loading...
+                      <%= paginate @emo_tweets %>
+                    </div>
+                    <p class="infinite-scroll-last">End of content</p>
+                    <p class="infinite-scroll-error">No more pages to load</p>
+                  </div>
                 </div>
               </div>
             </div>
