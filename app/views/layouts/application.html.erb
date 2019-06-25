@@ -31,9 +31,9 @@
                 <a class="navbar-brand" href="#">Emotch</a>
               </div>
               <div class="col-md-4 offset-md-1">
-                <%= search_form_for @q, url: tweets_path do |f| %>
-                  <%= f.search_field :content_or_user_name_cont, class:"mr-sm-1" %>
-                  <%= f.submit :class => "btn btn-outline-success my-2 my-sm-0" %>
+                <%= search_form_for @q, url: tweets_path, class: "form-inline my-2 my-lg-0" do |f| %>
+                  <%= f.search_field :content_or_user_name_cont, class:"mr-sm-1 form-control" %>
+                  <%= f.submit :class => "btn btn-outline-success" %>
                 <% end %>
               </div>
               <div class="col-md-1">
@@ -41,6 +41,7 @@
                   <%= image_tag(current_user.image, size: "32x32", class: "rounded-circle") %>
                 <% end %>
               </div>
+              <%= link_to 'Logout', '/signout', class:"btn btn-outline-info" %>
             </div>
           </div>
         </nav>

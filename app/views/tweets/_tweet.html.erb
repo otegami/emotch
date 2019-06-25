@@ -1,4 +1,4 @@
-<div class="card my-5">
+<div class="card my-5 tweet">
   <div id="tweet-<%= tweet.id %>">
     <% if tweet.image.attached? %>
       <%= image_tag(tweet.image.variant(combine_options:{resize:"600x350^",crop:"600x350+0+0",gravity: :center}).processed, :class => "card-img") %>
