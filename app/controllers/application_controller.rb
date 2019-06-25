@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  # set search form
+  def search_form
+    @q = Tweet.ransack(params[:q])
+  end
 end

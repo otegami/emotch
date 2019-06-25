@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # create Environment variable for twitter APIs
 gem 'dotenv-rails', groups: [:development, :test]
+# adds step-by-step debugging
+gem 'pry-byebug'
 # user twitter APIs
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -53,6 +55,9 @@ gem 'counter_culture', '~> 2.0'
 gem 'bootstrap', '~> 4.3.1'
 # use Font-awesome
 gem 'font-awesome-sass', '~> 5.8.1'
+# use search function by ransack
+gem 'ransack'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

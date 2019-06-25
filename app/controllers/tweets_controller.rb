@@ -1,9 +1,10 @@
 class TweetsController < ApplicationController
   before_action :logged_in_user, only: [:index, :create, :destroy]
+  before_action :search_form, only: [:index, :create, :destroy]
   before_action :correct_user, only: :destroy
   def index
     @user = current_user
-    @tweets = Tweet.page(params[:page])
+    @tweets = @q.result.includes(:user).page(params[:page])
   end
 
   def create

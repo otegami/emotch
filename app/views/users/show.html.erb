@@ -50,7 +50,7 @@
                   <% end %>
                   <%= paginate @tweets %>
                 </div>
-                <div class="tab-pane active" id="emo_index" role="tabpanel">
+                <div class="tab-pane" id="emo_index" role="tabpanel">
                   <% if @user.emo_tweets.any? %>
                     <% @emo_tweets.each do |tweet| %>
                       <%= render '/tweets/tweet', tweet: tweet %>
