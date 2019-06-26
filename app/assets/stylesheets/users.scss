@@ -6,5 +6,11 @@
   font-weight: 500;
 }
 .profile-tab {
-  border-bottom: solid;
+  border: 1px solid #DDD;
+}
+.profile-tab_item {
+  position: relative;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
 }
