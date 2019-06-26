@@ -13,10 +13,9 @@ class TweetsController < ApplicationController
       flash[:success] = "Tweet created"
       redirect_to tweets_path
     else
-      @user = current_user
-      @tweets = Tweet.all
+      @tweet
       flash[:error] = "Tweet fault"
-      render 'tweets/index'
+      redirect_to tweets_path
     end
   end
 
