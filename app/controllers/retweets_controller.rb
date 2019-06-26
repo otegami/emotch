@@ -4,10 +4,10 @@ class RetweetsController < ApplicationController
   def create
     tweet = Tweet.find_by(params[:tweet_id])
     if current_user.share(tweet)
-      flash[:success] = "Success Retweet"
+      flash[:notice] = "Success Retweet"
       redirect_to tweets_path
     else
-      flash[:error] = "Tweet fault"
+      flash[:notice] = "Tweet fault"
       redirect_to tweets_path
     end
   end
