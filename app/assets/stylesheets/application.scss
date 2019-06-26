@@ -17,6 +17,9 @@
  @import "bootstrap";
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ body {
+   background-color: #F5F5F5;
+ }
  main {
    padding-top: 70px;
    background-color: #F5F5F5;
@@ -32,10 +35,10 @@
  .page-load-status {
   display: none; /* hidden by default */
   padding-top: 20px;
-  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
   text-align: center;
   color: #777;
-}
-nav.pagination {
+ }
+ nav.pagination {
   display: none;
-}
+ }
