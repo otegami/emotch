@@ -1,7 +1,7 @@
 <%= form_with model: current_user.tweets.build, local: :true do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field p-2">
-    <%= f.text_area :content, placeholder: "25words change your world", class:"form-control", rows:"3"%>
+    <%= f.text_area :content, placeholder: "25words change your world", maxlength: 25, class:"form-control", rows:"1"%>
   </div>
   <div class="row">
     <div class="col-md-6">

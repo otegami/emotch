@@ -9,6 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <% if flash[:notice] %>
+      <div class="notice text-center text-blue">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <% if logged_in? %>
       <header class="nav">
         <nav class="navbar navbar-expand-lg navbar-light bg-light text-center fixed-top">
@@ -46,11 +51,6 @@
           </div>
         </nav>
       </header>
-    <% end %>
-    <% if flash[:notice] %>
-      <div class="notice">
-        <%= flash[:notice]%>
-      </div>
     <% end %>
     <%= yield %>
   </body>

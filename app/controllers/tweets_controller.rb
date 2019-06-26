@@ -10,13 +10,11 @@ class TweetsController < ApplicationController
   def create
     @tweet = current_user.tweets.build(tweet_params)
     if @tweet.save
-      flash[:success] = "Tweet created"
-      redirect_to tweets_path
+      flash[:notice] = "ツイート成功"
     else
-      @tweet
-      flash[:error] = "Tweet fault"
-      redirect_to tweets_path
+      flash[:notice] = "ツイート失敗"
     end
+    redirect_to tweets_path
   end
 
   def destroy
