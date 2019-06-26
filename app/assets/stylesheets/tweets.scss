@@ -1,0 +1,14 @@
+// Place all the styles related to the Tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.card-img {
+  width: 100%;
+  object-fit: cover;
+}
+.card {
+  height: 10%;
+}
+#user_name {
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ body {
+   background-color: #F5F5F5;
+ }
+ main {
+   padding-top: 70px;
+   background-color: #F5F5F5;
+ }
+ .notice {
+   background-color: #00FFFF;
+ }
+ // I want to write this scss in tweets.scss. how do I write? maybe about partial?
+ .tweet-content, .profile-name {
+   font-size: 30px;
+   font-weight: 700;
+ }
+ .page-load-status {
+  display: none; /* hidden by default */
+  padding-top: 20px;
+  border-bottom: 1px solid #DDD;
+  text-align: center;
+  color: #777;
+ }
+ nav.pagination {
+  display: none;
+ }

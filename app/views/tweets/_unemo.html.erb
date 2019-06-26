@@ -1,0 +1,4 @@
+<%= form_with(url: emotion_path(tweet.id), method: :delete, remote: true) do |f| %>
+<%= button_tag '<i class="fas fa-quote-right fa-2x", style="color: #0000FF"></i>'.html_safe, :type => "submit",
+  :class =>"btn btn-default btn-s-md text-white" %>
+<% end %>

@@ -1,0 +1,5 @@
+<%= form_with(url: retweets_path, local: true) do |f| %>
+  <div><%= f.hidden_field :tweet_id, :value => tweet.id %></div>
+  <%= button_tag '<i class="fab fa-twitter fa-2x", style="color: white"></i>&emsp;ツイートする'.html_safe, :type => "submit",
+    :class =>"btn btn-default btn-s-md text-white" %>
+<% end %>

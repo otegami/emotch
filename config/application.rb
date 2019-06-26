@@ -14,5 +14,15 @@ module Emo
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    # setting rspec
+    config.generators do |g|
+      g.test_framework :rspec,
+            view_specs: false,
+            helper_specs: false,
+            controller_specs: false,
+            routing_specs: false
+    end
+    # to active javascript when you use Ajax.
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

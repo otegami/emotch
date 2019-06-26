@@ -1,0 +1,26 @@
+<main class="tweet-index">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 mt-2">
+        <div class="col-md-10 offset-md-1">
+          <div class="micropost_form card">
+            <%= render 'shared/tweet_form' %>
+          </div>
+          <div id="tweets">
+            <% if @user.tweets.any? %>
+              <%= render @tweets %>
+            <% end %>
+          </div>
+          <div class="page-load-status">
+            <div class="infinite-scroll-request">
+              Loading...
+              <%= paginate @tweets %>
+            </div>
+            <p class="infinite-scroll-last">End of content</p>
+            <p class="infinite-scroll-error">No more pages to load</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
