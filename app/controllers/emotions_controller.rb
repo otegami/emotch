@@ -17,6 +17,7 @@ class EmotionsController < ApplicationController
       format.js
     end
   end
+  
   def destroy
     @tweet = Tweet.find(params[:id])
     current_user.unemo(@tweet)
