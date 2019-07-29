@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 offset-md-2 mt-2">
+        <div class="col-md-10 offset-md-1 mt-2">
           <div class="col-md-10 offset-md-1 media">
             <%= image_tag(@user.image, :class => "rounded-circle") %>
             <div class="col-md-8 offset-md-1 my-auto profile-name">
@@ -24,8 +24,8 @@
   <div class="tweet-index">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 offset-md-2 mt-2">
-          <div class="col-md-10 offset-md-1">
+        <div class="col-md-10 offset-md-1 mt-2 col-lg-8 offset-lg-2">
+          <div class="col-lg-10 offset-lg-1">
             <ul class="nav nav-pills nav-justified text-center profile-tab" role="tablist">
               <li class="nav-item profile-tab_item" role="presentation">
                 <a class="nav-link active" href="#tweet_index" aria-controls="tweet_index" data-toggle="tab" role="tab">Profile Post(<%= @user.tweets.count %>)</a>
@@ -40,8 +40,8 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 offset-md-2 mt-2">
-          <div class="col-md-10 offset-md-1">
+        <div class="col-md-10 offset-md-1 mt-2 col-lg-8 offset-lg-2">
+          <div class="col-lg-10 offset-lg-1">
             <div id="profile_index">
               <div class="tab-content">
                 <div class="tab-pane active" id="tweet_index" role="tabpanel">
