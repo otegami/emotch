@@ -7,7 +7,7 @@
     <% end %>
     <div class="card-img-overlay">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 mb-5">
           <% if current_user?(tweet.user) %>
             <%= link_to tweet_path(tweet), method: :delete, data: { confirm: "You sure ?" }, class:"float-right" do %>
               <i class="fas fa-trash-restore"></i>削除
@@ -17,7 +17,7 @@
       </div>
       <div class="row">
         <div class="col-md-10 offset-md-1">
-          <div class="tweet-content text-white h2 text-center my-5 pt-1">
+          <div class="tweet-content text-white h2 text-center mt-lg-3 pt-1">
             <%= tweet.content %>
             <div class="row">
               <div class="col-md-12 mt-1">

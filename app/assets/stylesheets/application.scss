@@ -19,6 +19,9 @@
  @import "font-awesome";
  body {
    background-color: #F5F5F5;
+   height: 100%;
+   min-height: 100vh;
+   position: relative;
  }
  main {
    padding-top: 70px;
@@ -42,3 +45,12 @@
  nav.pagination {
   display: none;
  }
+footer {
+  background-color: #FFD700;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
