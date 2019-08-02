@@ -47,6 +47,5 @@ class User < ApplicationRecord
       config.access_token_secret = ENV['YOUR_ACCESS_SECRET']
     end
     user.update(tweet.content)
-
   end
 end

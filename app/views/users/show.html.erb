@@ -2,20 +2,20 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 offset-md-2 mt-2">
-          <div class="col-md-10 offset-md-1 media">
+        <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1 mt-2">
+          <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1 media">
             <%= image_tag(@user.image, :class => "rounded-circle") %>
-            <div class="col-md-8 offset-md-1 my-auto profile-name">
+            <div class="col-md-5 offset-md-1 col-lg-8 offset-lg-1 my-auto profile-name">
               @<%= @user.name %>
             </div>
-            <div class="col-md-3 my-auto">
+            <div class="col-md-4 offset-md-2 col-lg-3">
               <%= link_to 'twitterへ', @user.url, class: "btn btn-info" %>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 my-3 text-center total-emo">
+        <div class="col-md-12 col-lg-12 my-3 text-center total-emo">
           Total emo: <%= @user.tweets.sum(:emotions_count) %>
         </div>
       </div>
@@ -24,13 +24,13 @@
   <div class="tweet-index">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 offset-md-2 mt-2">
-          <div class="col-md-10 offset-md-1">
+        <div class="col-md-10 offset-md-1 mt-2 col-lg-8 offset-lg-2">
+          <div class="col-lg-10 offset-lg-1">
             <ul class="nav nav-pills nav-justified text-center profile-tab" role="tablist">
-              <li class="col-md-6 nav-item" role="presentation">
+              <li class="nav-item profile-tab_item" role="presentation">
                 <a class="nav-link active" href="#tweet_index" aria-controls="tweet_index" data-toggle="tab" role="tab">Profile Post(<%= @user.tweets.count %>)</a>
               </li>
-              <li class="col-md-6 nav-item" role="presentation">
+              <li class="nav-item profile-tab_item" role="presentation">
                 <a class="nav-link" href="#emo_index" aria-controls="emo_index" data-toggle="tab" role="tab">Emo Post(<%= @user.emo_tweets.count %>)</a>
               </li>
             </ul>
@@ -40,8 +40,8 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 offset-md-2 mt-2">
-          <div class="col-md-10 offset-md-1">
+        <div class="col-md-10 offset-md-1 mt-2 col-lg-8 offset-lg-2">
+          <div class="col-lg-10 offset-lg-1">
             <div id="profile_index">
               <div class="tab-content">
                 <div class="tab-pane active" id="tweet_index" role="tabpanel">
