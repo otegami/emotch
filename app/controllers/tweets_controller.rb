@@ -20,7 +20,7 @@ class TweetsController < ApplicationController
   def destroy
     @tweet.destroy
     flash[:success] = "Tweet deleted!"
-    redirect_to request.referrer || root_url
+    redirect_to request.referrer || root_path
   end
 
   private
@@ -30,6 +30,6 @@ class TweetsController < ApplicationController
 
   def correct_user
     @tweet = current_user.tweets.find_by(id: params[:id])
-    redirect_to root_url if @tweet.nil?
+    redirect_to root_path if @tweet.nil?
   end
 end
