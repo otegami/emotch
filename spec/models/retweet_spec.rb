@@ -16,10 +16,4 @@ RSpec.describe Retweet, type: :model do
     retweet.tweet_id = nil
     expect(retweet).to_not be_valid
   end
-
-  # it "shares a tweet by user" do
-  #   user = create(:user)
-  #   tweet = create(:tweet)
-  #   expect(user.share(tweet)).to be_truthy
-  # end
 end
