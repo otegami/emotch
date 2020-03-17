@@ -30,10 +30,13 @@ lineなどを筆頭とし、私たちは好きなタイミングで好きなだ�
 
 ## Documents
 - Function List
+
 https://docs.google.com/spreadsheets/d/1sgRLe3gmuYTezW-g6ysHXJgjcYR6RW_CmDZmLtmAOkw/edit?usp=sharing
 
 - Databases
+
 https://docs.google.com/spreadsheets/d/14r1RyIqLBAq5KmeFHgS1HUEJnlvdLwoYmTiaRmAHN24/edit?usp=sharing
+
 
 ## Acknowledgments
 Thank you to all who support me.  
